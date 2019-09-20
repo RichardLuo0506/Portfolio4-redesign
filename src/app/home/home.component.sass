@@ -25,7 +25,7 @@ section
 			text-align: center
 			flex: 0 0 calc(100% / 16)
 			font-size: 7vmin
-			font-family: $product-sans-bold
+			font-family: $nasalization
 			color: $red
 		.web-url
 			line-height: 10vw
@@ -43,25 +43,25 @@ section
 		flex-direction: column
 		justify-content: center
 		.heading
-			font-family: $teko
-			font-size: 8em
+			font-family: $bebas
+			font-size: 6em
 			line-height: 1
 			text-transform: uppercase
-			letter-spacing: 0.1em
+			letter-spacing: 0.05em
 		.subheading
-			color: $text
-			font-size: 1.5em
+			color: #ccc
+			font-size: 1.2em
 			line-height: 1.5
 			width: 40%
-			margin: 1em 0 2em
+			margin: 2em 0
 			span
 				color: $red
 
 		.view-projects
 			text-transform: uppercase
 			color: $red
-			font-family: $teko
-			font-size: 1.7em
+			font-family: $bebas
+			font-size: 1.5em
 			line-height: 1
 			letter-spacing: 0.1em
 			padding: 5px 10px
@@ -76,7 +76,7 @@ section
 				content: ''
 				display: block
 				background: rgb($red, 30%)
-				top: 40%
+				top: 50%
 				right: 0
 				bottom: 0
 				left: 0
@@ -112,4 +112,103 @@ section
 					font-size: 1.5em
 				&:hover
 					color: white
+#me
+	display: flex
+	padding-bottom: 20rem
+	.half-column
+		flex: 0 0 43.75%
+		max-width: 43.75%
+		position: relative
+		padding-top: 70%
+		&.left
+			margin-left: 6.25%
+			.inner
+				bottom: 11rem
+				.contact-me
+					font-size: 1.5rem
+					line-height: 3rem
+					letter-spacing: 0.05em
+					text-transform: uppercase
+					position: relative
+					color: $red
+					font-family: $bebas
+					position: absolute
+					bottom: -5rem
+					right: calc(100% / 7)
+					.bar
+						display: inline-block
+						height: 2px 
+						width: 3rem
+						background: $text-dark
+						margin-left: 1rem
+						bottom: 0.4rem
+						position: relative
+		&.right
+			margin-right: 6.25%
+			.inner
+				top: 11rem
+		.inner
+			position: absolute
+			top: 0
+			right: 0
+			bottom: 0
+			left: 0
+			.photo
+				background-position: center center
+				background-repeat: no-repeat
+				background-size: cover
+				background-position-x: 70%
+				height: 100%
+				width: 100%
+			.content-wrapper
+				display: flex
+				align-items: center
+				padding: 0 12.5%
+				height: 100%
+				background: $red
+				position: relative
+				z-index: -1
+				.content
+					header
+						.line
+							font-family: $bebas
+							font-size: 4rem
+							line-height: 1
+							color: white
+							letter-spacing: 0.05em
+							text-transform: uppercase
+							&.hl
+								color: $yellow
+					.body-text
+						margin: 2rem 0
+						font-size: 1rem
+						line-height: 1.8
+						color: #50232e
+					.ps
+						color: white
+						font-size: 1.2rem
+footer.home-footer
+	background: $red
+	height: 800px
+	padding: 5rem 0
+	.heading
+		text-align: center
+		.title
+			font-family: $bebas
+			line-height: 1
+			text-transform: uppercase
+			position: relative
+			.back
+				font-size: 20rem
+				font-weight: 900
+				letter-spacing: 0.1em
+				color: #ef1b49
+			.front
+				letter-spacing: 0.1em
+				color: white
+				font-size: 6rem
+				position: absolute
+				top: 50%
+				left: 50%
+				transform: translate(-50%, -50%)
 

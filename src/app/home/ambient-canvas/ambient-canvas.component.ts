@@ -16,7 +16,6 @@ export class AmbientCanvasComponent implements OnInit {
 		const types = ['coalesce', 'swirl']
 		let index = Math.floor(Math.random() * 2)
 		let baseHue = Math.floor(Math.random() * 255)
-		console.log(baseHue);
 		this.initCanvas(types[index], { backgroundColor: '#1a1a1a', baseHue: baseHue })
 	}
 

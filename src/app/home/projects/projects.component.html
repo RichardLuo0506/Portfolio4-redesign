@@ -1,25 +1,23 @@
-<div class="projects-grid">
-	<div class="grid-item">
-		<header>Projects</header>
-	</div>
-	<div class="grid-item">
-		<div class="thumb-container">
-			<div class="inner"></div>
-		</div>
-	</div>
-	<div class="grid-item">
-		<div class="thumb-container">
-			<div class="inner"></div>
-		</div>
-	</div>
-	<div class="grid-item">
-		<div class="thumb-container">
-			<div class="inner"></div>
-		</div>
-	</div>
-	<div class="grid-item">
-		<div class="thumb-container">
-			<div class="inner"></div>
-		</div>
-	</div>
+<div class="projects-wrapper">
+  <header>
+  	<div class="section-title">Projects</div>
+  	<div class="bar"></div>
+  	<div class="section-desc">My work and side projects at each company I've worked since I became a web developer. Each project shows my progression as a developer.</div>
+  </header>
+  <div *ngFor="let project of projects" class="project-row">
+    <div class="content-half">
+      <div class="thumb-wrapper">
+        <div class="inner" [style.backgroundImage]="'url(' + project.imgSrc + ')'"></div>
+      </div>
+      <div class="desc">
+      	<div class="big-number">{{project.number}}</div>
+        <div class="meta">
+          <div class="number">{{project.number}}</div>
+          <div class="title">{{project.title}}</div>
+        </div>
+        <div class="view-project">View Project<span class="bar"></span></div>
+      </div>
+    </div>
+    <div class="empty-half"></div>
+  </div>
 </div>

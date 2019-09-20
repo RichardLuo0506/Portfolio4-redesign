@@ -1,15 +1,95 @@
-.projects-grid
-	display: flex
-	flex-direction: row-reverse
-	flex-wrap: wrap
-	.grid-item
-		flex: 0 0 50%
-		padding: 6.25%
+@import variables
+
+.projects-wrapper
+	margin-top: 3rem
+	header
+		width: 50%
+		margin-left: 50%
+		padding: 0 6.25%
+		position: relative
+		top: 6rem
+		.section-title
+			letter-spacing: 0.05em
+			margin-left: -0.3rem
+			font-size: 6rem
+			line-height: 1
+			color: $text-dark
+			font-family: $bebas
+			text-transform: uppercase
+		.bar
+			width: 5rem
+			border-bottom: 2px solid $text-dark
+			margin: 1rem 0 2rem
+		.section-desc
+			font-size: 1rem
+			line-height: 1.6
+	.project-row
+		display: flex
+		margin-top: -21rem
 		&:nth-child(even)
-			margin-top: -12.5%
-		.thumb-container
+			padding-bottom: 19rem
+		.content-half
+			flex: 0 0 50%
+			padding: 0 6.25%
 			position: relative
-			width: 100%
-			border: 1px solid red
-			height: 0
-			padding-top: 100%
+			max-width: 50vw
+			.thumb-wrapper
+				position: relative
+				width: 100%
+				padding-top: 100%
+				.inner
+					position: absolute
+					top: 0
+					right: 0
+					bottom: 0
+					left: 0
+					background-position: center center
+					background-repeat: no-repeat
+					background-size: cover
+			.desc
+				position: relative
+				margin-top: 2rem
+				display: flex
+				justify-content: space-between
+				font-family: $bebas
+				color: $text-dark
+				.big-number
+					font-size: 20rem
+					position: absolute
+					font-weight: 900
+					color: rgba(150, 150, 150, 0.1)
+					top: -12rem
+					left: -4.3rem
+				.meta
+					display: flex
+					.number
+						font-size: 1.5rem
+						line-height: 3rem
+						margin-right: 0.8rem
+					.title
+						font-size: 3rem
+						line-height: 3rem
+						text-transform: uppercase
+						padding-right: 2rem
+				.view-project
+					font-size: 1.5rem
+					line-height: 3rem
+					letter-spacing: 0.05em
+					text-transform: uppercase
+					position: relative
+					color: $red
+					flex: 0 0 190px
+					.bar
+						display: inline-block
+						height: 2px 
+						width: 3rem
+						background: $text-dark
+						margin-left: 1rem
+						bottom: 0.4rem
+						position: relative
+		.empty-half
+			flex: 0 0 50%
+			padding: 0 6.25%
+		&:nth-child(odd)
+			.content-half
+				order: 2

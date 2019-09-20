@@ -7,6 +7,7 @@ import { Component, OnInit, Input, ElementRef } from '@angular/core';
 })
 export class GridLinesComponent implements OnInit {
 	@Input() color
+	@Input() paddingTop
 	constructor(private elementRef: ElementRef) { }
 
 	ngOnInit() { }
@@ -17,6 +18,9 @@ export class GridLinesComponent implements OnInit {
 			for (let grid of grids) {
 				grid.style.borderColor = this.color
 			}
+		}
+		if (this.paddingTop) {
+			this.elementRef.nativeElement.style.paddingTop = this.paddingTop
 		}
 	}
 }
