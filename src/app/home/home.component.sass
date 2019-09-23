@@ -34,6 +34,17 @@ section
 			letter-spacing: 0.2em
 			text-transform: uppercase
 			font-weight: 500
+		.go-to-blog
+			line-height: 10vw
+			display: flex
+			align-items: center
+			font-family: $bebas
+			letter-spacing: 0.2em
+			margin-right: 6.25%
+			color: $text
+			i
+				font-size: 1.5rem
+				margin-left: 0.5rem
 	.splash-content
 		flex: 1
 		position: relative
@@ -89,10 +100,14 @@ section
 				&:before 
 					transform: translateX(0)
 	
-	footer
+	footer.splash-footer
 		height: 10vw
 		position: relative
 		margin-left: 50%
+		display: flex
+		align-items: center
+		justify-content: space-between
+		padding-right: 6.25%
 		.social-links
 			height: 100%
 			display: flex
@@ -112,6 +127,12 @@ section
 					font-size: 1.5em
 				&:hover
 					color: white
+		.contact
+			font-family: $bebas
+			letter-spacing: 0.2em
+			span
+				color: $red
+				margin-left: 0.2rem
 #me
 	display: flex
 	padding-bottom: 20rem
@@ -183,14 +204,15 @@ section
 						margin: 2rem 0
 						font-size: 1rem
 						line-height: 1.8
-						color: #50232e
+						color: $text-on-red-dark
 					.ps
 						color: white
 						font-size: 1.2rem
 footer.home-footer
+	position: relative
 	background: $red
-	height: 800px
-	padding: 5rem 0
+	padding: 5rem 0 10rem
+	overflow: hidden
 	.heading
 		text-align: center
 		.title
@@ -198,6 +220,8 @@ footer.home-footer
 			line-height: 1
 			text-transform: uppercase
 			position: relative
+			transform: translateX(3.5ch)
+			user-select: none
 			.back
 				font-size: 20rem
 				font-weight: 900
@@ -211,4 +235,118 @@ footer.home-footer
 				top: 50%
 				left: 50%
 				transform: translate(-50%, -50%)
+		.subtitle
+			padding: 0 37.5%
+			color: $text-on-red
+			font-size: 1rem
+			position: relative
+			.bar
+				width: 3rem
+				margin: -5rem auto 2rem
+				background: white
+				height: 2px
+			.msg
+				line-height: 2
+	.contact-form
+		margin: 4rem 0
+		padding: 2rem 31.25%
+		font-size: 1rem
+		color: $text-on-red
+		.form-row
+			display: flex
+			justify-content: space-between
+			margin-bottom: 2rem
+			input
+				flex: 0 0 calc(50% - 1rem)
+				outline: none
+				background: transparent
+				border: none
+				border-bottom: 1px solid #d00e3b
+				color: white
+				padding: 0.5rem 0.2rem
+				&:focus
+					border-color: $text-on-red
+				&::placeholder
+					color: $text-on-red
+		textarea
+			outline: none
+			background: transparent
+			border: 1px solid white
+			width: 100%
+			resize: none
+			border: 1px solid #d00e3b
+			color: white
+			padding: 0.5rem
+			border-radius: 2px
+			&:focus
+				border-color: $text-on-red
+			&::placeholder
+				color: $text-on-red
+		.send-btn
+			color: white
+			letter-spacing: 0.2em
+			font-size: 1rem
+			margin: 2rem 0
+			float: right
+	.social-links
+		display: flex
+		align-items: center
+		justify-content: center
+		width: 100%
+		padding: 5rem 0 1rem
+		.social-btn
+			color: $text-on-red
+			transition: 200ms
+			display: inline-flex
+			justify-content: center
+			align-items: center
+			width: 40px
+			height: 40px
+			margin-right: 1em
+			i
+				font-size: 1.7em
+			&.email i, &.github i 
+				font-size: 1.5em
+			&:hover
+				color: white
+	.email
+		text-align: center
+		font-family: $bebas
+		letter-spacing: 0.2em
+		font-size: 1rem
+		color: $text-on-red
+	.pattern
+		position: absolute
+		background: rgba(197, 34, 72, 0.3)
+		&.pattern-1
+			top: 0
+			right: 0
+			width: 18.75%
+			height: 24vw
+		&.pattern-2
+			top: 12vw
+			right: 0
+			width: 6.25%
+			height: 24vw
+		&.pattern-3
+			top: 0
+			right: 6.25%
+			width: 12.5%
+			height: 12vw
+		&.pattern-4
+			bottom: 0
+			left: 0
+			width: 31.25%
+			height: 20vw
+		&.pattern-6
+			bottom: 0
+			left: 0
+			width: 43.75%
+			height: 8vw
+		&.pattern-7
+			bottom: 0
+			left: 0
+			width: 18.75%
+			height: 20vw
+
 
