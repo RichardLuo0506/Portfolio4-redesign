@@ -20,10 +20,16 @@ export class ProjectModalComponent implements OnInit {
 	ngOnInit() {
 	}
 
+	ngOnDestroy() {
+		clearAllBodyScrollLocks();
+	}
+
 	viewProject(project) {
 		console.log(project);
 		this.project = project
 		this.show = true
+		// this.targetElement = document.querySelector('#targetElementId');
+		// disableBodyScroll(this.targetElement)
 		disableBodyScroll()
 	}
 
