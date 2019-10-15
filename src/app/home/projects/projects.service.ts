@@ -10,9 +10,9 @@ export class ProjectsService {
 	constructor() {
 		this._projects = [
 			new Project({
-				title: 'Portfolio v3',
-				subtitle: 'Built With AngularJS',
-				imgSrc: 'assets/img/portfolio3.png'
+				title: 'Portfolio v4',
+				subtitle: 'Built With Angular 8',
+				imgSrc: 'assets/img/portfolio4-screenshot-draft.png'
 			}),
 			new Project({
 				title: 'Goat Alerts',
@@ -20,14 +20,14 @@ export class ProjectsService {
 				imgSrc: 'assets/img/goat-sw.png',
 			}),
 			new Project({
-				title: 'Portfolio v4',
-				subtitle: 'Built With Angular 8',
-				imgSrc: 'assets/img/portfolio4-screenshot-draft.png'
-			}),
-			new Project({
 				title: 'Backbone File List',
 				subtitle: 'Keyboard navigable fully accessible table',
 				imgSrc: 'assets/img/pagelist-demo.png'
+			}),
+			new Project({
+				title: 'Portfolio v3',
+				subtitle: 'Built With AngularJS',
+				imgSrc: 'assets/img/portfolio3.png'
 			}),
 			new Project({
 				title: 'List Manager',
