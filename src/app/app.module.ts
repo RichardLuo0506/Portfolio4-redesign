@@ -7,6 +7,7 @@ import { HomeComponent } from './home/home.component';
 import { AmbientCanvasComponent } from './home/ambient-canvas/ambient-canvas.component';
 import { GridLinesComponent } from './shared/grid-lines/grid-lines.component';
 import { ProjectsComponent } from './home/projects/projects.component';
+import { ProjectModalComponent } from './home/projects/project-modal/project-modal.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { ProjectsComponent } from './home/projects/projects.component';
     HomeComponent,
     AmbientCanvasComponent,
     GridLinesComponent,
-    ProjectsComponent
+    ProjectsComponent,
+    ProjectModalComponent
   ],
   imports: [
     BrowserModule,

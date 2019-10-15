@@ -1,0 +1,8 @@
+<div class="project-modal-wrapper" [ngClass]="{show: show}">
+	<div class="backdrop" (click)="close()"></div>
+	<div class="ratio-container">
+		<div class="project-modal">
+			<div class="project-img" [style.backgroundImage]="project.imgSrc && 'url(' + project.imgSrc + ')'"></div>
+		</div>
+	</div>
+</div>
