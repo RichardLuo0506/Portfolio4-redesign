@@ -1,8 +1,51 @@
 <div class="project-modal-wrapper" [ngClass]="{show: show}">
-	<div class="backdrop" (click)="close()"></div>
-	<div class="ratio-container">
-		<div class="project-modal">
-			<div class="project-img" [style.backgroundImage]="project.imgSrc && 'url(' + project.imgSrc + ')'"></div>
-		</div>
-	</div>
+  <div class="backdrop" (click)="close()"></div>
+  <div class="ratio-container">
+    <div class="project-modal" [style.backgroundImage]="project.imgSrc && 'url(' + project.imgSrc + ')'">
+      <button class="close-btn" (click)="close()"><i class="ionicons ion-chevron-left"></i></button>
+      <div id="project-title-container">
+        <div id="project-title">{{project.title}}</div>
+      </div>
+      <div class="project-info">
+        <div class="tabs">
+          <div class="tab" [ngClass]="{active: tab === 'details'}" (click)="tab = 'details'">Details</div>
+          <div class="tab" [ngClass]="{active: tab === 'problems'}" (click)="tab = 'problems'">Problems</div>
+          <div class="tab" [ngClass]="{active: tab === 'result'}" (click)="tab = 'result'">Result</div>
+        </div>
+        <div id="content" *ngIf="tab === 'details'">
+          <div class="section" *ngIf="project.task">
+            <div class="section-title">Task</div>
+            <div class="section-text" [innerHtml]="project.task"></div>
+          </div>
+          <div class="section" *ngIf="project.tech">
+            <div class="section-title">Technologies</div>
+            <div class="section-techs">
+              <div class="tech" *ngFor="let tech of project.tech" [innerHtml]="getMarkup(tech)"></div>
+            </div>
+          </div>
+        </div>
+        <div id="content" *ngIf="tab === 'problems'">
+          <div class="section" *ngIf="project.problems">
+            <div class="section-title">Problems & Solutions</div>
+            <div class="section-text" [innerHtml]="project.problems"></div>
+          </div>
+        </div>
+        <div id="content" *ngIf="tab === 'result'">
+          <div class="section" *ngIf="project.result">
+            <div class="section-title">Result</div>
+            <div class="section-text" [innerHtml]="project.result"></div>
+          </div>
+        </div>
+        <div class="project-demo" *ngIf="project.demo">
+          <a class="btn" target="_blank" [href]="project.demo">Demo</a>
+        </div>
+        <div class="project-blog" *ngIf="project.blog">
+          <a class="btn" target="_blank" [href]="project.blog">View Article</a>
+        </div>
+        <div class="project-chrome-web-store" *ngIf="project.chromeWebStore">
+          <a class="btn" target="_blank" [href]="project.chromeWebStore">Chrome Web Store</a>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>

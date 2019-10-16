@@ -22,24 +22,131 @@
 		right: 0
 		bottom: 0
 		left: 0
-		background: rgba(0, 0, 0, 0.4)
+		background: rgba(0, 0, 0, 0.8)
 	.ratio-container
-		width: 72%
-		padding-top: 40%
-		height: 0
+		// width: 50%
+		// padding-top: 30%
+		// height: 0
+		width: 720px
+		height: 432px
 		position: relative
 		.project-modal
-			display: flex
 			position: absolute
 			top: 0
 			right: 0
 			bottom: 0
 			left: 0
-			background: white
+			background-position: center center
+			background-repeat: no-repeat
+			background-size: cover
 			box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23)
-			.project-img
-				flex: 0 0 40%
-				height: 100%
-				background-position: center center
-				background-repeat: no-repeat
-				background-size: cover
+			.close-btn
+				width: 48px
+				height: 48px
+				background: $red
+				color: $yellow
+				position: relative
+				z-index: 1
+				i
+					font-size: 16px
+				&:hover i
+					animation: 2s nudge-left infinite
+			#project-title-container
+				position: absolute
+				top: 0
+				bottom: 0
+				left: 0
+				width: 50%
+				display: flex
+				align-items: center
+				justify-content: center
+				padding: 8%
+				#project-title
+					position: relative
+					color: white
+					text-align: center
+					font-size: 1.8rem
+					border: 4px solid white
+					font-weight: 500
+					padding: 10px 12px
+					backdrop-filter: blur(3px)
+					background: rgba(black, 0.1)
+					&.min-content
+						width: min-content
+
+			.project-info
+				position: absolute
+				top: 0
+				right: 0
+				bottom: 0
+				width: 50%
+				background: rgba(white, 0.9)
+				display: flex
+				flex-direction: column
+				font-size: 0.875rem
+				.tabs
+					flex: 0 0 48px
+					border-bottom: 1px solid #ced3d8
+					padding: 0 24px
+					display: flex
+					justify-content: space-between
+					.tab
+						flex: 0 0 33.333333%
+						cursor: pointer
+						transition: 300ms
+						font-family: $bebas
+						text-align: center 
+						letter-spacing: 0.05rem
+						margin-bottom: -1px
+						line-height: 48px
+						border-bottom: 2px solid transparent
+						height: 48px
+						&.active
+							border-color: $red
+							color: $text-dark
+						&:hover
+							color: $text-dark
+				#content
+					flex: 1
+					padding: 24px
+					overflow-y: auto
+					.section
+						margin-bottom: 1.5rem
+						&:last-child
+							margin-bottom: 0
+						.section-title
+							color: $text-dark
+							font-family: $bebas
+							font-size: 1.2rem
+							letter-spacing: 0.06rem
+							margin-bottom: 0.5rem
+						.section-text
+							line-height: 1.5
+							p
+								margin: 0.6em 0
+						.section-techs
+							display: flex
+							flex-wrap: wrap
+							align-items: center
+							.tech
+								display: inline-flex
+								align-items: center
+								margin-right: 12px
+								margin-bottom: 6px
+								height: 1.2rem
+								img
+									height: 1.2rem
+									margin-right: 4px
+				.project-demo, .project-blog, .project-chrome-web-store
+					text-align: right
+					a
+						height: 48px
+						background: $red
+						color: $yellow
+						padding: 0 15px
+						font-family: $bebas
+						font-size: 1rem
+						letter-spacing: 0.05em
+
+
+

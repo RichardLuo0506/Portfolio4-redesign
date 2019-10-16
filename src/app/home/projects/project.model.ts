@@ -4,6 +4,13 @@ interface ProjectOpts {
 	imgSrc?: string,
 	description?: string,
 	number?: string,
+	tech?: string[],
+	task?: string,
+	problems?: string,
+	result?: string,
+	demo?: string,
+	blog?: string,
+	chromeWebStore?: string,
 }
 
 export class Project {
