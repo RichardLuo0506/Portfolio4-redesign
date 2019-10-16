@@ -22,7 +22,7 @@ export class ProjectsService {
 			new Project({
 				title: 'Goat Alerts',
 				subtitle: 'Automated TradingView Bot',
-				imgSrc: 'assets/img/goat-sw.png',
+				imgSrc: 'assets/img/goat-sw2.png',
 				tech: [],
 				task: ``,
 				problems: ``,
@@ -32,7 +32,7 @@ export class ProjectsService {
 			new Project({
 				title: 'Backbone File List',
 				subtitle: 'Keyboard navigable fully accessible table',
-				imgSrc: 'assets/img/pagelist-demo.png',
+				imgSrc: 'assets/img/pagelist-demo2.png',
 				tech: [],
 				task: ``,
 				problems: ``,
