@@ -28,7 +28,6 @@ export class ProjectModalComponent implements OnInit {
 	}
 
 	viewProject(project) {
-		console.log(project);
 		var self = this
 		this.project = project
 		setTimeout(() => {
@@ -42,13 +41,22 @@ export class ProjectModalComponent implements OnInit {
 
 	getMarkup(tech) {
 		let logoMap = {
+			'Angular 8': 'angular-logo.png',
 			'AngularJS': 'angularjs-logo.png',
+			'AWS': 'aws-logo.png',
+			'Backbone.js': 'backbonejs-logo.png',
+			'Chrome Extension API': 'chrome-extension-logo.png',
 			'EmailJS': 'emailjs-logo.png',
 			'jQuery UI': 'jqueryui-logo.png',
-			'MySQL': '',
+			'less': 'less-logo.png',
+			'Moment.js': 'momentjs-logo.png',
+			'MySQL': 'mysql-logo.png',
+			'node.js': 'nodejs-logo.png',
 			'PHP': 'php-logo.png',
-			'SASS': '',
-			'ScrollReveal': 'scrollreveal-logo.svg'
+			'Pine Script': 'pinescript-logo.png',
+			'Sass': 'sass-logo.png',
+			'ScrollReveal': 'scrollreveal-logo.svg',
+			'Stripe': 'stripe-logo.png'
 		}
 		if (logoMap[tech])
 			return `<img src="assets/img/${logoMap[tech]}" />${tech}`

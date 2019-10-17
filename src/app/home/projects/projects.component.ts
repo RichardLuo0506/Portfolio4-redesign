@@ -1,6 +1,5 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ProjectsService } from './projects.service';
-import { ProjectModalComponent } from './project-modal/project-modal.component';
 
 @Component({
 	selector: 'projects',
@@ -15,11 +14,6 @@ export class ProjectsComponent implements OnInit {
 	ngOnInit() {
 		this._projects = this.projectsService.projects
 
-	}
-
-	@ViewChild(ProjectModalComponent, { static: true }) projectModal
-	ngAfterContentInit() {
-		this.projectModal.viewProject(this._projects[3]);
 	}
 
 	get projects() {
