@@ -2,6 +2,7 @@
 
 @import typography
 @import variables
+@import responsive
 @import globals
 @import animations
 
@@ -25,6 +26,8 @@ body
 	font-family: $avenir
 	font-size: 16px
 	color: $text
+	+media-xs
+		font-size: 14px
 
 *, *:before, *:after
 	-webkit-box-sizing: inherit

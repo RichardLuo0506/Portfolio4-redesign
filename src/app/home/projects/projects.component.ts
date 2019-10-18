@@ -13,7 +13,6 @@ export class ProjectsComponent implements OnInit {
 
 	ngOnInit() {
 		this._projects = this.projectsService.projects
-
 	}
 
 	get projects() {

@@ -1,4 +1,5 @@
 @import variables
+@import responsive
 
 section
 	position: relative
@@ -19,7 +20,10 @@ section
 		display: flex
 		position: relative
 		color: white
-		height: 10vw
+		height: 8vw
+		align-items: center
+		+media-xs
+			height: calc(8vw + 40px)
 		.logo
 			line-height: 10vw
 			text-align: center
@@ -27,6 +31,11 @@ section
 			font-size: 7vmin
 			font-family: $nasalization
 			color: $red
+			+media-xs
+				font-size: 32px
+				flex: 0 0 calc(100% / 8 + 2px)
+				margin-left: calc(100% / 16 - 2px)
+				text-align: left
 		.web-url
 			line-height: 10vw
 			padding-left: 1rem
@@ -35,17 +44,22 @@ section
 			text-transform: uppercase
 			font-weight: 500
 			font-family: $nasalization
+			+media-xs
+				font-size: 12px
+				padding: 0
 		.go-to-blog
 			line-height: 10vw
 			display: flex
 			align-items: center
 			font-family: $bebas
 			letter-spacing: 0.2em
-			margin-right: 6.25%
+			margin-right: calc(6.25% - 2px)
 			color: $text
 			i
 				font-size: 1.5rem
 				margin-left: 0.5rem
+			+media-xs
+				font-size: 14px
 	.splash-content
 		flex: 1
 		position: relative
@@ -54,20 +68,30 @@ section
 		display: flex
 		flex-direction: column
 		justify-content: center
+		+media-xs
+			max-width: 62.5%
 		.heading
 			font-family: $bebas
 			font-size: 6em
 			line-height: 1
 			text-transform: uppercase
 			letter-spacing: 0.05em
+			&.richard
+				margin-left: -3px
+				+media-xs
+					margin-left: -1px
+			+media-xs
+				font-size: 3.5em
 		.subheading
 			color: #ccc
-			font-size: 1.2em
+			font-size: 1em
 			line-height: 1.5
 			width: 40%
 			margin: 2em 0
 			span
 				color: $red
+			+media-xs
+				width: 100%
 
 		.view-projects
 			text-transform: uppercase
@@ -109,10 +133,17 @@ section
 		align-items: center
 		justify-content: space-between
 		padding-right: 6.25%
+		+media-xs
+			height: calc(8vw + 40px)
+			margin: 0
+			padding: 0 31.25%
 		.social-links
 			height: 100%
 			display: flex
 			align-items: center
+			+media-xs
+				font-size: 16px
+				width: 37.5vw
 			.social-btn
 				color: $text
 				transition: 200ms
@@ -122,6 +153,9 @@ section
 				width: 40px
 				height: 40px
 				margin-right: 1em
+				+media-xs
+					width: 12.5vw
+					margin: 0
 				i
 					font-size: 1.7em
 				&.email i, &.github i 
@@ -131,19 +165,30 @@ section
 		.contact
 			font-family: $bebas
 			letter-spacing: 0.2em
+			transition: 300ms
+			+media-xs
+				display: none
 			span
 				color: $red
 				margin-left: 0.2rem
+			&:hover
+				cursor: pointer
+				color: white
 #me
 	display: flex
 	padding-bottom: 20rem
+	+media-xs
+		display: block
 	.half-column
 		flex: 0 0 43.75%
 		max-width: 43.75%
 		position: relative
 		padding-top: 70%
+		+media-xs
 		&.left
 			margin-left: 6.25%
+			+media-xs
+				max-width: 50%
 			.inner
 				bottom: 11rem
 				.contact-me
@@ -157,16 +202,30 @@ section
 					position: absolute
 					bottom: -5rem
 					right: calc(100% / 7)
+					transition: 300ms
+					+media-xs
+						display: none
 					.bar
 						display: inline-block
 						height: 2px 
 						width: 3rem
 						background: $text-dark
 						margin-left: 1rem
-						bottom: 0.4rem
+						bottom: 0.5rem
 						position: relative
+						transition: 300ms
+					&:hover
+						cursor: pointer
+						color: $text-dark
+						.bar
+							background: $red
+
 		&.right
 			margin-right: 6.25%
+			+media-xs
+				// flex: 0 0 93.75%
+				// max-width: 93.75%
+				margin-left: 18.75%
 			.inner
 				top: 11rem
 		.inner
@@ -209,7 +268,7 @@ section
 					.ps
 						color: white
 						font-size: 1.2rem
-footer.home-footer
+footer#home-footer
 	position: relative
 	background: $red
 	padding: 5rem 0 10rem

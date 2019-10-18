@@ -1,4 +1,5 @@
 @import variables
+@import responsive
 
 .project-modal-wrapper
 	position: fixed
@@ -24,12 +25,11 @@
 		left: 0
 		background: rgba(0, 0, 0, 0.8)
 	.ratio-container
-		// width: 50%
-		// padding-top: 30%
-		// height: 0
 		width: 720px
 		height: 432px
 		position: relative
+		+media-xs
+			margin: 20px
 		.project-modal
 			position: absolute
 			top: 0
