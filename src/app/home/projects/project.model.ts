@@ -8,7 +8,8 @@ interface ProjectOpts {
 	task?: string,
 	problems?: string,
 	result?: string,
-	demo?: string,
+	demo?: any,
+	demoDesc?: string,
 	blog?: string,
 	chromeWebStore?: string,
 }

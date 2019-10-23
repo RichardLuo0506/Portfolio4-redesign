@@ -13,6 +13,11 @@
           <div class="tab" [ngClass]="{active: tab === 'result'}" (click)="tab = 'result'">Result</div>
         </div>
         <div id="content" *ngIf="tab === 'details'">
+          <div class="section" *ngIf="project.demo">
+            <div class="section-title">Demo</div>
+            <div class="section-text" *ngIf="project.demoDesc" [innerHtml]="project.demoDesc"></div>
+            <div class="section-demo" *ngIf="project.demo" [innerHtml]="project.demo"></div>
+          </div>
           <div class="section" *ngIf="project.task">
             <div class="section-title">Task</div>
             <div class="section-text" [innerHtml]="project.task"></div>
@@ -20,7 +25,7 @@
           <div class="section" *ngIf="project.tech">
             <div class="section-title">Technologies</div>
             <div class="section-techs">
-              <div class="tech" *ngFor="let tech of project.tech" [innerHtml]="getMarkup(tech)"></div>
+              <div class="tech" *ngFor="let tech of project.tech" [innerHtml]="getTechMarkup(tech)"></div>
             </div>
           </div>
         </div>
@@ -36,14 +41,11 @@
             <div class="section-text" [innerHtml]="project.result"></div>
           </div>
         </div>
-        <div class="project-demo" *ngIf="project.demo">
-          <a class="btn" target="_blank" [href]="project.demo">Demo</a>
-        </div>
         <div class="project-blog" *ngIf="project.blog">
-          <a class="btn" target="_blank" [href]="project.blog">View Article</a>
+          <a class="btn" target="_blank" [href]="project.blog"><span>View Article</span></a>
         </div>
         <div class="project-chrome-web-store" *ngIf="project.chromeWebStore">
-          <a class="btn" target="_blank" [href]="project.chromeWebStore">Chrome Web Store</a>
+          <a class="btn" target="_blank" [href]="project.chromeWebStore"><span>Chrome Web Store</span></a>
         </div>
       </div>
     </div>

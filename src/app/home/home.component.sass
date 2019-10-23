@@ -47,6 +47,8 @@ section
 			+media-xs
 				font-size: 12px
 				padding: 0
+			+media-lg
+				padding: 0
 		.go-to-blog
 			line-height: 10vw
 			display: flex
@@ -60,6 +62,8 @@ section
 				margin-left: 0.5rem
 			+media-xs
 				font-size: 14px
+			+media-lg
+				font-size: 24px
 	.splash-content
 		flex: 1
 		position: relative
@@ -76,22 +80,27 @@ section
 			line-height: 1
 			text-transform: uppercase
 			letter-spacing: 0.05em
+			+media-xs
+				font-size: 3.5em
+			+media-lg
+				font-size: 8em
 			&.richard
 				margin-left: -3px
 				+media-xs
 					margin-left: -1px
-			+media-xs
-				font-size: 3.5em
 		.subheading
 			color: #ccc
 			font-size: 1em
 			line-height: 1.5
 			width: 40%
 			margin: 2em 0
-			span
-				color: $red
 			+media-xs
 				width: 100%
+			+media-lg
+				margin: 4rem 0
+				font-size: 1.5em	
+			span
+				color: $red
 
 		.view-projects
 			text-transform: uppercase
@@ -108,6 +117,8 @@ section
 			cursor: pointer
 			margin-left: -10px
 			overflow: hidden
+			+media-lg
+				font-size: 2em
 			&:before
 				content: ''
 				display: block
@@ -137,6 +148,8 @@ section
 			height: calc(8vw + 40px)
 			margin: 0
 			padding: 0 31.25%
+		+media-lg
+			margin-left: 56.25%
 		.social-links
 			height: 100%
 			display: flex
@@ -144,6 +157,10 @@ section
 			+media-xs
 				font-size: 16px
 				width: 37.5vw
+			+media-lg
+				width: 12.5vw
+				font-size: 20px
+				justify-content: space-evenly
 			.social-btn
 				color: $text
 				transition: 200ms
@@ -156,6 +173,8 @@ section
 				+media-xs
 					width: 12.5vw
 					margin: 0
+				+media-lg
+					margin: 0
 				i
 					font-size: 1.7em
 				&.email i, &.github i 
@@ -166,8 +185,13 @@ section
 			font-family: $bebas
 			letter-spacing: 0.2em
 			transition: 300ms
+			text-align: right
 			+media-xs
 				display: none
+			+media-lg
+				font-size: 20px
+				max-width: 25vw
+				margin-right: -4px
 			span
 				color: $red
 				margin-left: 0.2rem
@@ -193,7 +217,7 @@ section
 				bottom: 11rem
 				.contact-me
 					font-size: 1.5rem
-					line-height: 3rem
+					line-height: 2
 					letter-spacing: 0.05em
 					text-transform: uppercase
 					position: relative
@@ -205,6 +229,9 @@ section
 					transition: 300ms
 					+media-xs
 						display: none
+					+media-lg
+						font-size: 2rem
+						bottom: -7rem
 					.bar
 						display: inline-block
 						height: 2px 
@@ -214,6 +241,8 @@ section
 						bottom: 0.5rem
 						position: relative
 						transition: 300ms
+						+media-lg
+							bottom: 0.75rem
 					&:hover
 						cursor: pointer
 						color: $text-dark
@@ -258,6 +287,8 @@ section
 							color: white
 							letter-spacing: 0.05em
 							text-transform: uppercase
+							+media-lg
+								font-size: 5rem
 							&.hl
 								color: $yellow
 					.body-text
@@ -265,9 +296,15 @@ section
 						font-size: 1rem
 						line-height: 1.8
 						color: $text-on-red-dark
+						+media-lg
+							font-size: 1.2rem
+							margin: 2.5rem 0
+
 					.ps
 						color: white
 						font-size: 1.2rem
+						+media-lg
+							font-size: 1.4rem
 footer#home-footer
 	position: relative
 	background: $red
@@ -287,6 +324,8 @@ footer#home-footer
 				font-weight: 900
 				letter-spacing: 0.1em
 				color: #ef1b49
+				+media-lg
+					font-size: 25rem
 			.front
 				letter-spacing: 0.1em
 				color: white
@@ -295,11 +334,15 @@ footer#home-footer
 				top: 50%
 				left: 50%
 				transform: translate(-50%, -50%)
+				+media-lg
+					font-size: 7.5rem
 		.subtitle
 			padding: 0 37.5%
 			color: $text-on-red
 			font-size: 1rem
 			position: relative
+			+media-lg
+				font-size: 1.25rem
 			.bar
 				width: 3rem
 				margin: -5rem auto 2rem
@@ -316,6 +359,8 @@ footer#home-footer
 			display: flex
 			justify-content: space-between
 			margin-bottom: 2rem
+			+media-lg
+				font-size: 2.5rem
 			input
 				flex: 0 0 calc(50% - 1rem)
 				outline: none
@@ -324,6 +369,8 @@ footer#home-footer
 				border-bottom: 1px solid #d00e3b
 				color: white
 				padding: 0.5rem 0.2rem
+				+media-lg
+					font-size: 1.25rem
 				&:focus
 					border-color: $text-on-red
 				&::placeholder
@@ -338,6 +385,10 @@ footer#home-footer
 			color: white
 			padding: 0.5rem
 			border-radius: 2px
+			+media-lg
+				font-size: 1.25rem
+				padding: 0.75rem
+				height: 200px
 			&:focus
 				border-color: $text-on-red
 			&::placeholder
@@ -348,6 +399,25 @@ footer#home-footer
 			font-size: 1rem
 			margin: 2rem 0
 			float: right
+			font-family: $bebas
+			transition: 300ms
+			cursor: pointer
+			&:after
+				content: ''
+				display: inline-block
+				width: 3rem
+				height: 2px
+				margin-left: 1em
+				bottom: 0.35em
+				position: relative
+				background: white
+				transition: 300ms
+			&:hover
+				color: $yellow
+				&:after
+					background: $yellow
+			+media-lg
+				font-size: 1.25rem
 	.social-links
 		display: flex
 		align-items: center
@@ -363,6 +433,8 @@ footer#home-footer
 			width: 40px
 			height: 40px
 			margin-right: 1em
+			+media-lg
+				font-size: 20px
 			i
 				font-size: 1.7em
 			&.email i, &.github i 
@@ -375,6 +447,8 @@ footer#home-footer
 		letter-spacing: 0.2em
 		font-size: 1rem
 		color: $text-on-red
+		+media-lg
+			font-size: 20px
 	.pattern
 		position: absolute
 		background: rgba(195, 35, 72, 0.2)

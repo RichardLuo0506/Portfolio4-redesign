@@ -5,6 +5,8 @@
 	margin-top: 3rem
 	+media-xs
 		margin-top: 6rem
+	+media-lg
+		margin-top: -7rem
 	header
 		width: 50%
 		margin-left: 50%
@@ -15,6 +17,8 @@
 			width: 100%
 			margin: 0 0 6rem
 			position: static
+		+media-lg
+			top: 13rem
 		.section-title
 			letter-spacing: 0.05em
 			margin-left: -0.3rem
@@ -23,13 +27,19 @@
 			color: $text-dark
 			font-family: $bebas
 			text-transform: uppercase
+			+media-lg
+				font-size: 8rem
 		.bar
 			width: 5rem
 			border-bottom: 2px solid $text-dark
 			margin: 1rem 0 2rem
+			+media-lg
+				margin: 2rem 0 4rem
 		.section-desc
 			font-size: 1rem
 			line-height: 1.6
+			+media-lg
+				font-size: 1.25rem
 	.project-row
 		display: flex
 		margin-top: -21rem
@@ -74,7 +84,7 @@
 					font-size: 20rem
 					position: absolute
 					font-weight: 900
-					color: rgba(150, 150, 150, 0.1)
+					color: rgba(100, 100, 100, 0.1)
 					top: -12rem
 					left: -4.3rem
 					user-select: none
@@ -84,14 +94,19 @@
 						font-size: 1.5rem
 						line-height: 3rem
 						margin-right: 0.8rem
+						+media-lg
+							font-size: 2rem
+
 					.title
 						font-size: 3rem
-						line-height: 3rem
+						line-height: 1
 						text-transform: uppercase
 						padding-right: 2rem
+						+media-lg
+							font-size: 4rem
 				.view-project
 					font-size: 1.5rem
-					line-height: 3rem
+					line-height: 2
 					letter-spacing: 0.05em
 					text-transform: uppercase
 					position: relative
@@ -99,6 +114,9 @@
 					flex: 0 0 190px
 					transition: 300ms
 					height: fit-content
+					+media-lg
+						font-size: 2rem
+						flex: 0 0 232px
 					.bar
 						display: inline-block
 						height: 2px 
@@ -108,6 +126,8 @@
 						bottom: 0.5rem
 						position: relative
 						transition: 300m
+						+media-lg
+							bottom: 0.75rem
 					&:hover
 						cursor: pointer
 						color: $text-dark

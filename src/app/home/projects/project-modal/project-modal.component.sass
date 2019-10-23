@@ -25,8 +25,8 @@
 		left: 0
 		background: rgba(0, 0, 0, 0.8)
 	.ratio-container
-		width: 720px
-		height: 432px
+		width: 900px
+		height: 540px
 		position: relative
 		+media-xs
 			margin: 20px
@@ -86,7 +86,7 @@
 				font-size: 0.875rem
 				.tabs
 					flex: 0 0 48px
-					border-bottom: 1px solid #ced3d8
+					border-bottom: 1px solid $divider
 					padding: 0 24px
 					display: flex
 					justify-content: space-between
@@ -109,7 +109,12 @@
 				#content
 					flex: 1
 					padding: 24px
+					overflow-x: hidden
 					overflow-y: auto
+					&::-webkit-scrollbar
+						width: 0 !important
+					scrollbar-width: none
+					-ms-overflow-style: -ms-autohiding-scrollbar
 					.section
 						margin-bottom: 1.5rem
 						&:last-child
@@ -124,6 +129,20 @@
 							line-height: 1.5
 							p
 								margin: 0.6em 0
+						.section-demo
+							position: relative
+							padding-bottom: 56.25%
+							padding-top: 25px
+							height: 0
+							border: 1px solid $divider
+							border-radius: 2px
+							background: $text-dark
+							iframe 
+								position: absolute
+								top: 0
+								right: 0
+								bottom: 0
+								left: 0
 						.section-techs
 							display: flex
 							flex-wrap: wrap
@@ -137,7 +156,7 @@
 								img
 									height: 1.2rem
 									margin-right: 4px
-				.project-demo, .project-blog, .project-chrome-web-store
+				.project-blog, .project-chrome-web-store
 					text-align: right
 					a
 						height: 48px
@@ -147,6 +166,10 @@
 						font-family: $bebas
 						font-size: 1rem
 						letter-spacing: 0.05em
+					span
+						animation: 2s bounce infinite
+
+
 
 
 

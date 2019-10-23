@@ -1,5 +1,6 @@
 import { Component, OnInit, HostListener, ViewEncapsulation } from '@angular/core';
 import { disableBodyScroll, enableBodyScroll, clearAllBodyScrollLocks } from 'body-scroll-lock';
+import { DomSanitizer } from '@angular/platform-browser';
 
 @Component({
 	selector: 'project-modal',
@@ -39,7 +40,7 @@ export class ProjectModalComponent implements OnInit {
 		})
 	}
 
-	getMarkup(tech) {
+	getTechMarkup(tech) {
 		let logoMap = {
 			'Angular 8': 'angular-logo.png',
 			'AngularJS': 'angularjs-logo.png',
