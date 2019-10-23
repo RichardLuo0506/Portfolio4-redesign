@@ -54,7 +54,7 @@
                 "src/styles/"
               ]
             },
-            "scripts": []
+            "scripts": ["node_modules/emailjs-com/dist/email.js"]
           },
           "configurations": {
             "production": {

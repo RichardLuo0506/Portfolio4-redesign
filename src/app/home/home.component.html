@@ -64,13 +64,21 @@
       <div class="msg">Say hello below and I'll get back to you as soon as possible.</div>
     </div>
   </div>
-  <form class="contact-form" novalidate>
+  <form class="contact-form" #contactForm="ngForm" [ngFormOptions]="{updateOn: 'blur'}">
     <div class="form-row">
-      <input class="input-line left" type="text" placeholder="Your Name">
-      <input class="input-line right" type="email" placeholder="Your Email">
+      <div class="input-control">
+        <input class="input-line left" type="text" placeholder="Your Name" [(ngModel)]="contactFormModel.name" name="name" required #name="ngModel">
+        <div [ngClass]="{show: name.invalid && !name.pristine}" class="validation-text">Name is required</div>
+      </div>
+      <div class="input-control">
+        <input class="input-line right" type="email" placeholder="Your Email" [(ngModel)]="contactFormModel.email" name="email" required [pattern]="emailPattern" #email="ngModel">
+        <div [ngClass]="{show: email.errors?.required && !email.pristine}" class="validation-text">Email is required</div>
+        <div [ngClass]="{show: email.errors?.pattern && !email.pristine}" class="validation-text">Email is invalid</div>
+      </div>
     </div>
-    <textarea class="input-box" rows="7" placeholder="Your Message"></textarea>
-    <a class="send-btn clearfix">Send Message</a>
+    <textarea class="input-box" rows="7" placeholder="Your Message" [(ngModel)]="contactFormModel.message" name="message" required #message="ngModel"></textarea>
+    <div [ngClass]="{show: message.invalid && !message.pristine}" class="validation-text">Message is required</div>
+    <a class="send-btn clearfix" (click)="sendEmail(contactForm)">{{sendBtnText}}</a>
   </form>
   <div class="social-links">
     <a href="https://www.linkedin.com/in/richardluo0506" class="social-btn" target="_blank"><i class="ionicons ion-social-linkedin-outline"></i></a>

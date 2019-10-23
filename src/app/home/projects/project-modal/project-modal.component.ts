@@ -1,6 +1,5 @@
 import { Component, OnInit, HostListener, ViewEncapsulation } from '@angular/core';
 import { disableBodyScroll, enableBodyScroll, clearAllBodyScrollLocks } from 'body-scroll-lock';
-import { DomSanitizer } from '@angular/platform-browser';
 
 @Component({
 	selector: 'project-modal',

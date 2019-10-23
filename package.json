@@ -20,6 +20,7 @@
     "@angular/platform-browser-dynamic": "~8.2.5",
     "@angular/router": "~8.2.5",
     "body-scroll-lock": "^2.6.4",
+    "emailjs-com": "^2.4.0",
     "normalize.css": "^8.0.1",
     "open-simplex-noise": "^1.6.0",
     "rxjs": "~6.4.0",
