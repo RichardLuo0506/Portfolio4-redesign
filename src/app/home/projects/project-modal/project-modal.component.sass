@@ -29,7 +29,21 @@
 		height: 540px
 		position: relative
 		+media-xs
-			margin: 20px
+			margin: 0
+			width: 100%
+			height: 0
+			padding-top: 120%
+		@media screen and (min-width: 481px) and (max-width: 600px)
+			margin: 6.25%
+			width: 100%
+			height: 0
+			padding-top: 100%
+		@media screen and (min-width: 601px) and (max-width: 768px)
+			margin: 6.25%
+			height: 0
+			padding-top: 62%
+		+media-sm2-up
+			margin: 6.25%
 		.project-modal
 			position: absolute
 			top: 0
@@ -61,6 +75,12 @@
 				align-items: center
 				justify-content: center
 				padding: 8%
+				+media-xs
+					bottom: 50%
+					width: 100%
+				@media screen and (min-width: 481px) and (max-width: 600px)
+					bottom: 50%
+					width: 100%
 				#project-title
 					position: relative
 					color: white
@@ -84,12 +104,22 @@
 				display: flex
 				flex-direction: column
 				font-size: 0.875rem
+				+media-xs
+					top: 50%
+					width: 100%
+				@media screen and (min-width: 481px) and (max-width: 600px)
+					top: 50%
+					width: 100%
 				.tabs
 					flex: 0 0 48px
 					border-bottom: 1px solid $divider
 					padding: 0 24px
 					display: flex
 					justify-content: space-between
+					+media-xs
+						background: white
+					@media screen and (min-width: 481px) and (max-width: 600px)
+						background: white
 					.tab
 						flex: 0 0 33.333333%
 						cursor: pointer

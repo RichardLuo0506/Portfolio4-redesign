@@ -2,22 +2,26 @@
 @import responsive
 
 .projects-wrapper
-	margin-top: 3rem
-	+media-xs
-		margin-top: 6rem
+	// margin-top: 3rem
+	margin-top: 6rem
+	+media-sm2-up
+		margin-top: 3rem
 	+media-lg
 		margin-top: -7rem
 	header
-		width: 50%
-		margin-left: 50%
+		// top: 6rem
+		// width: 50%
+		// margin-left: 50%
 		padding: 0 6.25%
-		position: relative
-		top: 6rem
-		+media-xs
-			width: 100%
-			margin: 0 0 6rem
-			position: static
+		width: 100%
+		margin: 0 0 6rem
+		+media-sm2-up
+			top: 6rem
+			width: 50%
+			margin-left: 50%
+			
 		+media-lg
+			position: relative
 			top: 13rem
 		.section-title
 			letter-spacing: 0.05em
@@ -42,28 +46,37 @@
 				font-size: 1.25rem
 	.project-row
 		display: flex
-		margin-top: -21rem
 		pointer-events: none
+		padding: 0
+		margin: 0 0 120px
+		// margin-top: -21rem
 		&:nth-child(even)
-			padding-bottom: 19rem
-			+media-xs
-				padding: 0
-		+media-xs
+			// padding-bottom: 19rem
 			padding: 0
-			margin: 0 0 8rem
+			+media-sm2-up
+				padding-bottom: 18rem
+		+media-sm
+			margin: 0 0 180px
+		+media-sm2-up
+			margin: 0 0 220px
+			margin-top: -30rem
 		.content-half
-			flex: 0 0 50%
 			padding: 0 6.25%
 			position: relative
-			max-width: 50vw
 			pointer-events: initial
-			+media-xs
-				flex: 0 0 100%
-				max-width: 100vw
+			flex: 0 0 100%
+			max-width: 100vw
+			// flex: 0 0 50%
+			// max-width: 50vw
+			+media-sm2-up
+				flex: 0 0 50%
+				max-width: 50vw
 			.thumb-wrapper
 				position: relative
 				width: 100%
-				padding-top: 100%
+				padding-top: 62%
+				+media-sm2-up
+					padding-top: 100%
 				.inner
 					position: absolute
 					top: 0
@@ -91,41 +104,59 @@
 				.meta
 					display: flex
 					.number
-						font-size: 1.5rem
-						line-height: 3rem
-						margin-right: 0.8rem
+						font-size: 20px
+						line-height: 2
+						margin-right: 0.5em
+						+media-sm-up
+							font-size: 24px
+						+media-sm2-up
+							font-size: 20px
 						+media-lg
 							font-size: 2rem
 
 					.title
-						font-size: 3rem
+						// font-size: 3rem
+						font-size: 40px
 						line-height: 1
 						text-transform: uppercase
-						padding-right: 2rem
+						padding-right: 0.5em
+						+media-sm-up
+							font-size: 48px
+						+media-sm2-up
+							font-size: 40px
 						+media-lg
 							font-size: 4rem
 				.view-project
-					font-size: 1.5rem
 					line-height: 2
 					letter-spacing: 0.05em
 					text-transform: uppercase
 					position: relative
 					color: $red
-					flex: 0 0 190px
+					white-space: nowrap
 					transition: 300ms
 					height: fit-content
+					// font-size: 1.5rem
+					font-size: 20px
+					+media-sm-up
+						font-size: 24px
+					+media-sm2-up
+						font-size: 20px
 					+media-lg
 						font-size: 2rem
 						flex: 0 0 232px
 					.bar
 						display: inline-block
 						height: 2px 
-						width: 3rem
+						width: 2em
 						background: $text-dark
 						margin-left: 1rem
 						bottom: 0.5rem
 						position: relative
-						transition: 300m
+						transition: 300ms
+						@media screen and (max-width: 419px)
+							display: none
+						+media-sm2
+							display: none
 						+media-lg
 							bottom: 0.75rem
 					&:hover
@@ -137,10 +168,12 @@
 		.empty-half
 			flex: 0 0 50%
 			padding: 0 6.25%
-			visibility: hidden
 			pointer-events: none
-			+media-xs
-				display: none
+			// visibility: hidden
+			display: none
+			+media-sm2-up
+				display: block
+				visibility: hidden
 		&:nth-child(odd)
 			.content-half
 				order: 2

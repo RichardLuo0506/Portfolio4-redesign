@@ -1,6 +1,8 @@
 $xs: 480px
 $sm: 768px
+$sm2: 1024px
 $md: 1366px
+$md2: 1680px
 $lg: 1920px
 $xl: 2560px
 
@@ -12,21 +14,52 @@ $xl: 2560px
 	@media screen and (min-width: $xs + 1) and (max-width: $sm)
 		@content
 
+=media-sm-up
+	@media screen and (min-width: $xs + 1)
+		@content
+
+=media-sm2
+	@media screen and (min-width: $sm + 1) and (max-width: $sm2)
+		@content
+
+=media-sm2-up
+	@media screen and (min-width: $sm + 1)
+		@content
+
 =media-md
-	@media screen and (min-width: $sm + 1) and (max-width: $md)
+	@media screen and (min-width: $sm2 + 1) and (max-width: $md)
+		@content
+
+=media-md-up
+	@media screen and (min-width: $sm2 + 1)
+		@content
+
+=media-md2
+	@media screen and (min-width: $md + 1) and (max-width: $md2)
+		@content
+
+=media-md2-up
+	@media screen and (min-width: $md + 1)
 		@content
 
 =media-lg
-	// @media screen and (min-width: $md + 1) and (max-width: $lg)
-	@media screen and (min-width: $md + 1)
+	@media screen and (min-width: $md2 + 1) and (max-width: $lg)
+		@content
+
+=media-lg-up
+	@media screen and (min-width: $md2 + 1)
 		@content
 
 =media-xl
 	@media screen and (min-width: $lg + 1) and (max-width: $xl)
 		@content
 
+=media-xl-up
+	@media screen and (min-width: $lg + 1)
+		@content
+
 =media-xxl
-	@media screen and (min-width: $xl)
+	@media screen and (min-width: $xl + 1)
 		@content
 
 =aspect-ratio($width, $height)

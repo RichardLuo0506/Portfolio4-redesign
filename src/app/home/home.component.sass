@@ -20,33 +20,40 @@ section
 		display: flex
 		position: relative
 		color: white
-		height: 8vw
 		align-items: center
-		+media-xs
-			height: calc(8vw + 40px)
+		// height: calc(12.5vw + 48px)
+		height: calc(12.5vw + 32px)
+		+media-sm-up
+			height: calc(12.5vw + 40px)
+		+media-sm2-up
+			height: calc(12.5vw)
 		.logo
 			line-height: 10vw
-			text-align: center
-			flex: 0 0 calc(100% / 16)
-			font-size: 7vmin
 			font-family: $nasalization
 			color: $red
-			+media-xs
-				font-size: 32px
-				flex: 0 0 calc(100% / 8 + 2px)
-				margin-left: calc(100% / 16 - 2px)
-				text-align: left
+			// font-size: 48px
+			font-size: 32px
+			// flex: 0 0 calc(100% / 16)
+			flex: 0 0 calc(100% / 8 + 2px)
+			margin-left: calc(100% / 16 - 2px)
+			// text-align: center
+			text-align: left
+			+media-sm-up
+				font-size: 48px
+				margin-left: calc(100% / 16 - 4px)
+				flex: 0 
 		.web-url
 			line-height: 10vw
-			padding-left: 1rem
-			font-size: 2vmin
 			letter-spacing: 0.2em
 			text-transform: uppercase
 			font-weight: 500
 			font-family: $nasalization
-			+media-xs
-				font-size: 12px
-				padding: 0
+			font-size: 12px
+			// padding-left: 1rem
+			padding: 0
+			+media-sm-up
+				font-size: 14px
+				padding-left: 1.5em
 			+media-lg
 				padding: 0
 		.go-to-blog
@@ -68,20 +75,21 @@ section
 		flex: 1
 		position: relative
 		color: white
-		left: 18.75%
+		padding: 0 18.75%
 		display: flex
 		flex-direction: column
 		justify-content: center
-		+media-xs
-			max-width: 62.5%
 		.heading
 			font-family: $bebas
-			font-size: 6em
+			// font-size: 6em
+			font-size: 48px
 			line-height: 1
 			text-transform: uppercase
 			letter-spacing: 0.05em
-			+media-xs
-				font-size: 3.5em
+			+media-sm-up
+				font-size: 56px
+			+media-sm2-up
+				font-size: 70px
 			+media-lg
 				font-size: 8em
 			&.richard
@@ -90,12 +98,17 @@ section
 					margin-left: -1px
 		.subheading
 			color: #ccc
-			font-size: 1em
 			line-height: 1.5
-			width: 40%
+			// width: 40%
+			width: 100%
 			margin: 2em 0
-			+media-xs
-				width: 100%
+			font-size: 14px
+			+media-sm-up
+				font-size: 16px
+			+media-sm2-up
+				font-size: 18px
+				width: 60%
+
 			+media-lg
 				margin: 4rem 0
 				font-size: 1.5em	
@@ -106,7 +119,8 @@ section
 			text-transform: uppercase
 			color: $red
 			font-family: $bebas
-			font-size: 1.5em
+			// font-size: 1.5em
+			font-size: 20px
 			line-height: 1
 			letter-spacing: 0.1em
 			padding: 5px 10px
@@ -117,6 +131,10 @@ section
 			cursor: pointer
 			margin-left: -10px
 			overflow: hidden
+			+media-sm-up
+				font-size: 24px
+			+media-sm2-up
+				font-size: 28px
 			+media-lg
 				font-size: 2em
 			&:before
@@ -137,26 +155,36 @@ section
 					transform: translateX(0)
 	
 	footer.splash-footer
-		height: 10vw
 		position: relative
-		margin-left: 50%
 		display: flex
 		align-items: center
 		justify-content: space-between
-		padding-right: 6.25%
-		+media-xs
-			height: calc(8vw + 40px)
-			margin: 0
-			padding: 0 31.25%
+		height: calc(12.5vw + 32px)
+		// height: 10vw
+		// margin-left: 50%
+		// padding-right: 6.25%
+		margin: 0
+		padding: 0 31.25%
+		+media-sm-up
+			padding: 0 6.25%
+			height: calc(12.5vw + 40px)
+		+media-sm2-up
+			height: calc(12.5vw)
 		+media-lg
 			margin-left: 56.25%
 		.social-links
 			height: 100%
 			display: flex
 			align-items: center
-			+media-xs
-				font-size: 16px
-				width: 37.5vw
+			font-size: 16px
+			width: 37.5vw
+			+media-sm-up
+				flex: 0 0 42.857143%
+				justify-content: space-around
+			+media-sm2-up
+				justify-content: flex-start
+				margin-left: -8px
+
 			+media-lg
 				width: 12.5vw
 				font-size: 20px
@@ -169,10 +197,13 @@ section
 				align-items: center
 				width: 40px
 				height: 40px
-				margin-right: 1em
-				+media-xs
-					width: 12.5vw
-					margin: 0
+				// margin-right: 1em
+				margin: 0
+				width: 12.5vw
+				+media-sm2-up
+					width: 40px
+					margin-right: 20px
+
 				+media-lg
 					margin: 0
 				i
@@ -188,6 +219,10 @@ section
 			text-align: right
 			+media-xs
 				display: none
+			+media-sm-up
+				font-size: 14px
+			+media-sm2-up
+				font-size: 16px
 			+media-lg
 				font-size: 20px
 				max-width: 25vw
@@ -199,22 +234,25 @@ section
 				cursor: pointer
 				color: white
 #me
-	display: flex
-	padding-bottom: 20rem
-	+media-xs
-		display: block
+	// display: flex
+	// padding-bottom: 20rem
+	display: block
+	padding-bottom: 120px
+	+media-sm-up
+		padding-bottom: 160px
 	.half-column
 		flex: 0 0 43.75%
 		max-width: 43.75%
 		position: relative
-		padding-top: 70%
-		+media-xs
+		padding-top: 62%
 		&.left
 			margin-left: 6.25%
+			max-width: 87.5%
 			+media-xs
-				max-width: 50%
 			.inner
-				bottom: 11rem
+				// bottom: 11rem
+				bottom: 0
+				+media-xs
 				.contact-me
 					font-size: 1.5rem
 					line-height: 2
@@ -227,15 +265,16 @@ section
 					bottom: -5rem
 					right: calc(100% / 7)
 					transition: 300ms
-					+media-xs
-						display: none
+					display: none
+					+media-sm2-up
+						display: block
 					+media-lg
 						font-size: 2rem
 						bottom: -7rem
 					.bar
 						display: inline-block
 						height: 2px 
-						width: 3rem
+						width: 2em
 						background: $text-dark
 						margin-left: 1rem
 						bottom: 0.5rem
@@ -250,13 +289,15 @@ section
 							background: $red
 
 		&.right
-			margin-right: 6.25%
-			+media-xs
-				// flex: 0 0 93.75%
-				// max-width: 93.75%
-				margin-left: 18.75%
+			// margin-right: 6.25%
+			margin-left: 6.25%
+			max-width: 87.5%
+			padding: 0
+			z-index: 1
 			.inner
-				top: 11rem
+				// top: 11rem
+				position: static
+				+media-xs
 		.inner
 			position: absolute
 			top: 0
@@ -273,12 +314,15 @@ section
 			.content-wrapper
 				display: flex
 				align-items: center
-				padding: 0 12.5%
 				height: 100%
 				background: $red
 				position: relative
 				z-index: -1
+				// padding: 0 12.5%
+				padding: 14.285714%
+				+media-xs
 				.content
+					margin-top: calc(-20% - 96px)
 					header
 						.line
 							font-family: $bebas
@@ -317,8 +361,10 @@ footer#home-footer
 			line-height: 1
 			text-transform: uppercase
 			position: relative
-			transform: translateX(3.5ch)
+			// transform: translateX(3.5ch)
+			transform: translateX(0)
 			user-select: none
+			+media-xs
 			.back
 				font-size: 20rem
 				font-weight: 900
@@ -337,14 +383,18 @@ footer#home-footer
 				+media-lg
 					font-size: 7.5rem
 		.subtitle
-			padding: 0 37.5%
+			// padding: 0 37.5%
+			padding: 0 12.5%
 			color: $text-on-red
 			font-size: 1rem
 			position: relative
+			+media-sm-up
+				padding: 0 18.75%
+
 			+media-lg
 				font-size: 1.25rem
 			.bar
-				width: 3rem
+				width: 2em
 				margin: -5rem auto 2rem
 				background: white
 				height: 2px
@@ -352,17 +402,30 @@ footer#home-footer
 				line-height: 2
 	.contact-form
 		margin: 4rem 0
-		padding: 2rem 31.25%
+		// padding: 2rem 31.25%
+		padding: 2rem 6.25%
 		font-size: 1rem
 		color: $text-on-red
+		+media-sm-up
+			padding: 2rem 18.75%
 		.form-row
 			display: flex
 			justify-content: space-between
 			margin-bottom: 2rem
+			+media-xs
+				display: block
+				margin-bottom: 2.5rem
 			+media-lg
 				font-size: 2.5rem
 			.input-control
 				flex: 0 0 calc(50% - 1rem)
+				+media-xs
+					width: 100%
+					margin-bottom: 0.5rem
+				+media-sm-up
+					flex: 0 0 40%
+				+media-sm2-up
+					flex: 0 0 calc(50% - 3.125vw)
 				input
 					outline: none
 					background: transparent
@@ -370,6 +433,7 @@ footer#home-footer
 					border-bottom: 1px solid #d00e3b
 					color: white
 					padding: 0.5rem 0.2rem
+					width: 100%
 					+media-lg
 						font-size: 1.25rem
 					&:focus
@@ -408,12 +472,13 @@ footer#home-footer
 		.send-btn
 			color: white
 			letter-spacing: 0.2em
-			font-size: 1rem
 			margin: 2rem 0
 			float: right
 			font-family: $bebas
 			transition: 300ms
 			cursor: pointer
+			// font-size: 1rem
+			font-size: 20px
 			&:after
 				content: ''
 				display: inline-block
@@ -428,6 +493,10 @@ footer#home-footer
 				color: $yellow
 				&:after
 					background: $yellow
+			+media-sm-up
+				font-size: 24px
+			+media-sm2-up
+				font-size: 28px
 			+media-lg
 				font-size: 1.25rem
 	.social-links
