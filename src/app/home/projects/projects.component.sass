@@ -9,7 +9,6 @@
 	+media-lg
 		margin-top: -7rem
 	header
-		// top: 6rem
 		// width: 50%
 		// margin-left: 50%
 		padding: 0 6.25%
@@ -20,7 +19,7 @@
 			width: 50%
 			margin-left: 50%
 			
-		+media-lg
+		+media-lg-up
 			position: relative
 			top: 13rem
 		.section-title
@@ -49,12 +48,12 @@
 		pointer-events: none
 		padding: 0
 		margin: 0 0 120px
-		// margin-top: -21rem
 		&:nth-child(even)
-			// padding-bottom: 19rem
 			padding: 0
 			+media-sm2-up
 				padding-bottom: 18rem
+			+media-md-up
+				padding-bottom: 8rem
 		+media-sm
 			margin: 0 0 180px
 		+media-sm2-up
@@ -101,6 +100,15 @@
 					top: -12rem
 					left: -4.3rem
 					user-select: none
+					+media-md-up
+						top: -13rem
+						font-size: 22rem
+					+media-md2-up
+						top: -15rem
+						font-size: 24rem
+					+media-lg-up
+						top: -17rem
+						font-size: 26rem
 				.meta
 					display: flex
 					.number
@@ -111,11 +119,14 @@
 							font-size: 24px
 						+media-sm2-up
 							font-size: 20px
-						+media-lg
-							font-size: 2rem
+						+media-md-up
+							font-size: 24px
+						+media-md2-up
+							font-size: 28px
+						+media-lg-up
+							font-size: 32px
 
 					.title
-						// font-size: 3rem
 						font-size: 40px
 						line-height: 1
 						text-transform: uppercase
@@ -124,8 +135,12 @@
 							font-size: 48px
 						+media-sm2-up
 							font-size: 40px
-						+media-lg
-							font-size: 4rem
+						+media-md-up
+							font-size: 48px
+						+media-md2-up
+							font-size: 56px
+						+media-lg-up
+							font-size: 64px
 				.view-project
 					line-height: 2
 					letter-spacing: 0.05em
@@ -141,9 +156,12 @@
 						font-size: 24px
 					+media-sm2-up
 						font-size: 20px
-					+media-lg
-						font-size: 2rem
-						flex: 0 0 232px
+					+media-md-up
+						font-size: 24px
+					+media-md2-up
+						font-size: 28px
+					+media-lg-up
+						font-size: 32px
 					.bar
 						display: inline-block
 						height: 2px 

@@ -89,9 +89,13 @@ section
 			+media-sm-up
 				font-size: 56px
 			+media-sm2-up
-				font-size: 70px
-			+media-lg
-				font-size: 8em
+				font-size: 72px
+			+media-md-up
+				font-size: 88px
+			+media-md2-up
+				font-size: 104px
+			+media-lg-up
+				font-size: 120px
 			&.richard
 				margin-left: -3px
 				+media-xs
@@ -108,7 +112,10 @@ section
 			+media-sm2-up
 				font-size: 18px
 				width: 60%
-
+			+media-md-up
+				font-size: 20px
+			+media-md2-up
+				font-size: 22px
 			+media-lg
 				margin: 4rem 0
 				font-size: 1.5em	
@@ -135,8 +142,12 @@ section
 				font-size: 24px
 			+media-sm2-up
 				font-size: 28px
-			+media-lg
-				font-size: 2em
+			+media-md-up
+				font-size: 32px
+			+media-md2-up
+				font-size: 36px
+			+media-lg-up
+				font-size: 40px
 			&:before
 				content: ''
 				display: block
@@ -234,25 +245,34 @@ section
 				cursor: pointer
 				color: white
 #me
-	// display: flex
-	// padding-bottom: 20rem
 	display: block
 	padding-bottom: 120px
 	+media-sm-up
 		padding-bottom: 160px
+	+media-sm2-up
+		margin-top: -220px
+	+media-md-up
+		display: flex
+		padding-bottom: 20rem
 	.half-column
 		flex: 0 0 43.75%
 		max-width: 43.75%
 		position: relative
 		padding-top: 62%
+		+media-lg-up
+			flex: 0 0 31.25%
+			max-width: 31.25%
+			padding-top: 0
+			height: 900px
 		&.left
 			margin-left: 6.25%
 			max-width: 87.5%
-			+media-xs
+			+media-lg-up
+				margin-left: 18.75%
 			.inner
-				// bottom: 11rem
 				bottom: 0
-				+media-xs
+				+media-md-up
+					bottom: 11rem
 				.contact-me
 					font-size: 1.5rem
 					line-height: 2
@@ -289,15 +309,19 @@ section
 							background: $red
 
 		&.right
-			// margin-right: 6.25%
 			margin-left: 6.25%
 			max-width: 87.5%
 			padding: 0
 			z-index: 1
+			+media-md-up
+				margin-right: 6.25%
+				margin-left: 0
 			.inner
-				// top: 11rem
 				position: static
-				+media-xs
+				+media-md-up
+					top: 11rem
+				+media-lg-up
+					position: absolute
 		.inner
 			position: absolute
 			top: 0
@@ -318,11 +342,13 @@ section
 				background: $red
 				position: relative
 				z-index: -1
-				// padding: 0 12.5%
 				padding: 14.285714%
-				+media-xs
+				+media-md-up
+					padding: 12.5%
 				.content
 					margin-top: calc(-20% - 96px)
+					+media-md-up
+						margin-top: 0
 					header
 						.line
 							font-family: $bebas
@@ -364,7 +390,7 @@ footer#home-footer
 			// transform: translateX(3.5ch)
 			transform: translateX(0)
 			user-select: none
-			+media-xs
+			+media-md-up
 			.back
 				font-size: 20rem
 				font-weight: 900
@@ -408,6 +434,8 @@ footer#home-footer
 		color: $text-on-red
 		+media-sm-up
 			padding: 2rem 18.75%
+		+media-md2-up
+			padding: 2rem 31.25%
 		.form-row
 			display: flex
 			justify-content: space-between
